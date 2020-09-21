@@ -1,0 +1,7 @@
+application-prod.properties
+application-prod_mysql.properties
+.idea
+*.iml
+
+# Project exclude paths
+/target/
