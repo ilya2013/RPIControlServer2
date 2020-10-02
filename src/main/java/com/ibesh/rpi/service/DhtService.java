@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 @Component
@@ -32,10 +33,10 @@ public class DhtService {
         // user here is a prepopulated User instance
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd-HH.mm.ss");
         dhtModel.setTime(dhtDto.transformTimeInLocalDateTime(dateTimeFormatter));
+        dhtModel.setReceivedTime(LocalDateTime.now());
         DhtModel newDhtModel = dhtRepository.save(dhtModel);
         System.out.println(newDhtModel);
         System.out.println("Finish save dht");
-//        dhtRepository.findAll().forEach(System.out::println);
     }
 
 }
