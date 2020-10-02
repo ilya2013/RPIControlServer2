@@ -25,5 +25,6 @@ public class DhtModel {
     private LocalDateTime time;
     @Column(name="comment_", length=500, nullable=true, unique=false)
     private String comment;
+    private LocalDateTime receivedTime;
 
 }
