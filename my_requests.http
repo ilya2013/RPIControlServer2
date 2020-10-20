@@ -1,0 +1,18 @@
+
+POST 127.0.0.1:8080/monitoring?frequency=15
+
+###
+POST 127.0.0.1:8080/monitoring?frequency=17
+
+###
+POST 127.0.0.1:8080/monitoring?frequency=1212
+
+###
+
+POST http://127.0.0.1:8080/monitoring
+Content-Type: application/x-www-form-urlencoded
+
+frequency=234
+###
+
+

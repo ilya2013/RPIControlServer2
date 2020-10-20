@@ -2,7 +2,6 @@ package com.ibesh.rpi.controller;
 
 import org.springframework.stereotype.Controller;
 
-import java.util.Arrays;
 @Controller
 public class DhtController {
 

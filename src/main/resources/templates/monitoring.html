@@ -1,0 +1,25 @@
+<!doctype html>
+
+<html lang="en" xmlns:th="http://www.rpi.ibesh.com">
+<head>
+    <meta charset="utf-8">
+    <title>RPI Monitoring</title>
+</head>
+<body>
+<div align="center">
+    <h1>Monitoring</h1>
+</div>
+<span>Задана периодичность: </span><span th:text="${period}"></span>
+<form method = 'post' action="/monitoring">
+    <p>Периодичность в сек.<label>
+        <input name="period">
+    </label><input type="submit" value = 'Применить'></p>
+</form>
+
+<ul>
+    <th:block th:each="name : ${names}">
+        <li th:text="${name}"></li>
+    </th:block>
+</ul>
+</body>
+</html>
