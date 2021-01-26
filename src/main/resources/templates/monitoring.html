@@ -8,9 +8,10 @@
     <script data-th-inline="javascript">
         var nameJs = /*[[${period}]]*/;
     </script>
-    <script type="text/javascript" th:src="@{/js/cssandjs/actions.js}"></script>
+    <img data-th-src="@{/images/RPI.png}" alt="RPI"/>
 </head>
 <body>
+    <script type="text/javascript" th:src="@{/js/cssandjs/actions.js}"></script>
 <div align="center">
     <h1>Monitoring</h1>
 </div>
@@ -27,7 +28,7 @@
     </data-th-block>
 </ul>
 <p><label>Name:</label><span data-th-text="${period}"></span></p>
-<button type="button" data-th-onclick="showName(nameJs);">Show Name</button>
+<button type="button" data-th-onclick="showName(nameJs);">Show period</button>
 <button type="button" data-th-onclick="showAlert()">Show Alert</button>
 </body>
 </html>
